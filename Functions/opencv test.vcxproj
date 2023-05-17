@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{9c756e8e-36cc-4cc9-b360-971755187c51}</ProjectGuid>
+    <RootNamespace>opencvtest</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>c:\opencv\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>c:\opencv\build\x64\vc16\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>c:\opencv\build\include;$(IncludePath)</IncludePath>
+    <LibraryPath>c:\opencv\build\x64\vc16\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_world470d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opencv_world470d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="FaceDetector.cpp" />
+    <ClCompile Include="FaceRecognizer.cpp" />
+    <ClCompile Include="GetFrame.cpp" />
+    <ClCompile Include="MyPCA.cpp" />
+    <ClCompile Include="opencv test.cpp" />
+    <ClCompile Include="Task2.cpp" />
+    <ClCompile Include="WriteTrainData.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FaceDetector.h" />
+    <ClInclude Include="FaceRecognizer.h" />
+    <ClInclude Include="GetFrame.h" />
+    <ClInclude Include="MyPCA.h" />
+    <ClInclude Include="ReadFile.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="WriteTrainData.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="haarcascade\haarcascade_eye.xml" />
+    <Xml Include="haarcascade\haarcascade_eye_tree_eyeglasses.xml" />
+    <Xml Include="haarcascade\haarcascade_frontalface_alt.xml" />
+    <Xml Include="haarcascade\haarcascade_frontalface_alt2.xml" />
+    <Xml Include="haarcascade\haarcascade_frontalface_default.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Clustered_Image.png" />
+    <Image Include="faces\1-1.bmp" />
+    <Image Include="faces\1-10.bmp" />
+    <Image Include="faces\1-2.bmp" />
+    <Image Include="faces\1-3.bmp" />
+    <Image Include="faces\1-4.bmp" />
+    <Image Include="faces\1-5.bmp" />
+    <Image Include="faces\1-6.bmp" />
+    <Image Include="faces\1-7.bmp" />
+    <Image Include="faces\1-8.bmp" />
+    <Image Include="faces\1-9.bmp" />
+    <Image Include="faces\10_2.bmp" />
+    <Image Include="faces\11_2.bmp" />
+    <Image Include="faces\12_2.bmp" />
+    <Image Include="faces\13_2.bmp" />
+    <Image Include="faces\14_2.bmp" />
+    <Image Include="faces\15_2.bmp" />
+    <Image Include="faces\16_2.bmp" />
+    <Image Include="faces\17_2.bmp" />
+    <Image Include="faces\18_2.bmp" />
+    <Image Include="faces\1_1.bmp" />
+    <Image Include="faces\2-11.bmp" />
+    <Image Include="faces\2-12.bmp" />
+    <Image Include="faces\2-13.bmp" />
+    <Image Include="faces\2-14.bmp" />
+    <Image Include="faces\2-15.bmp" />
+    <Image Include="faces\2-16.bmp" />
+    <Image Include="faces\2-17.bmp" />
+    <Image Include="faces\2-18.bmp" />
+    <Image Include="faces\2-19.bmp" />
+    <Image Include="faces\2_1.bmp" />
+    <Image Include="faces\3_1.bmp" />
+    <Image Include="faces\4_1.bmp" />
+    <Image Include="faces\5_1.bmp" />
+    <Image Include="faces\6_1.bmp" />
+    <Image Include="faces\7_1.bmp" />
+    <Image Include="faces\8_1.bmp" />
+    <Image Include="faces\9_1.bmp" />
+    <Image Include="faces\s1.bmp" />
+    <Image Include="faces\s10.bmp" />
+    <Image Include="faces\s100.bmp" />
+    <Image Include="faces\s101.bmp" />
+    <Image Include="faces\s102.bmp" />
+    <Image Include="faces\s103.bmp" />
+    <Image Include="faces\s104.bmp" />
+    <Image Include="faces\s105.bmp" />
+    <Image Include="faces\s11.bmp" />
+    <Image Include="faces\s12.bmp" />
+    <Image Include="faces\s13.bmp" />
+    <Image Include="faces\s14.bmp" />
+    <Image Include="faces\s15.bmp" />
+    <Image Include="faces\s16.bmp" />
+    <Image Include="faces\s17.bmp" />
+    <Image Include="faces\s18.bmp" />
+    <Image Include="faces\s19.bmp" />
+    <Image Include="faces\s2.bmp" />
+    <Image Include="faces\s20.bmp" />
+    <Image Include="faces\s21.bmp" />
+    <Image Include="faces\s22.bmp" />
+    <Image Include="faces\s23.bmp" />
+    <Image Include="faces\s24.bmp" />
+    <Image Include="faces\s25.bmp" />
+    <Image Include="faces\s26.bmp" />
+    <Image Include="faces\s27.bmp" />
+    <Image Include="faces\s28.bmp" />
+    <Image Include="faces\s29.bmp" />
+    <Image Include="faces\s3.bmp" />
+    <Image Include="faces\s30.bmp" />
+    <Image Include="faces\s31.bmp" />
+    <Image Include="faces\s32.bmp" />
+    <Image Include="faces\s33.bmp" />
+    <Image Include="faces\s34.bmp" />
+    <Image Include="faces\s35.bmp" />
+    <Image Include="faces\s36.bmp" />
+    <Image Include="faces\s37.bmp" />
+    <Image Include="faces\s38.bmp" />
+    <Image Include="faces\s39.bmp" />
+    <Image Include="faces\s4.bmp" />
+    <Image Include="faces\s40.bmp" />
+    <Image Include="faces\s41.bmp" />
+    <Image Include="faces\s42.bmp" />
+    <Image Include="faces\s43.bmp" />
+    <Image Include="faces\s44.bmp" />
+    <Image Include="faces\s45.bmp" />
+    <Image Include="faces\s46.bmp" />
+    <Image Include="faces\s47.bmp" />
+    <Image Include="faces\s48.bmp" />
+    <Image Include="faces\s49.bmp" />
+    <Image Include="faces\s5.bmp" />
+    <Image Include="faces\s50.bmp" />
+    <Image Include="faces\s51.bmp" />
+    <Image Include="faces\s52.bmp" />
+    <Image Include="faces\s53.bmp" />
+    <Image Include="faces\s54.bmp" />
+    <Image Include="faces\s55.bmp" />
+    <Image Include="faces\s56.bmp" />
+    <Image Include="faces\s57.bmp" />
+    <Image Include="faces\s58.bmp" />
+    <Image Include="faces\s59.bmp" />
+    <Image Include="faces\s6.bmp" />
+    <Image Include="faces\s60.bmp" />
+    <Image Include="faces\s61.bmp" />
+    <Image Include="faces\s62.bmp" />
+    <Image Include="faces\s63.bmp" />
+    <Image Include="faces\s64.bmp" />
+    <Image Include="faces\s65.bmp" />
+    <Image Include="faces\s66.bmp" />
+    <Image Include="faces\s67.bmp" />
+    <Image Include="faces\s68.bmp" />
+    <Image Include="faces\s69.bmp" />
+    <Image Include="faces\s7.bmp" />
+    <Image Include="faces\s70.bmp" />
+    <Image Include="faces\s71.bmp" />
+    <Image Include="faces\s72.bmp" />
+    <Image Include="faces\s73.bmp" />
+    <Image Include="faces\s74.bmp" />
+    <Image Include="faces\s75.bmp" />
+    <Image Include="faces\s76.bmp" />
+    <Image Include="faces\s77.bmp" />
+    <Image Include="faces\s78.bmp" />
+    <Image Include="faces\s79.bmp" />
+    <Image Include="faces\s8.bmp" />
+    <Image Include="faces\s80.bmp" />
+    <Image Include="faces\s81.bmp" />
+    <Image Include="faces\s82.bmp" />
+    <Image Include="faces\s83.bmp" />
+    <Image Include="faces\s84.bmp" />
+    <Image Include="faces\s85.bmp" />
+    <Image Include="faces\s86.bmp" />
+    <Image Include="faces\s87.bmp" />
+    <Image Include="faces\s88.bmp" />
+    <Image Include="faces\s89.bmp" />
+    <Image Include="faces\s9.bmp" />
+    <Image Include="faces\s90.bmp" />
+    <Image Include="faces\s91.bmp" />
+    <Image Include="faces\s92.bmp" />
+    <Image Include="faces\s93.bmp" />
+    <Image Include="faces\s94.bmp" />
+    <Image Include="faces\s95.bmp" />
+    <Image Include="faces\s96.bmp" />
+    <Image Include="faces\s97.bmp" />
+    <Image Include="faces\s98.bmp" />
+    <Image Include="faces\s99.bmp" />
+    <Image Include="New_test\1-11.bmp" />
+    <Image Include="New_test\1-12.bmp" />
+    <Image Include="New_test\1-13.bmp" />
+    <Image Include="New_test\1-14.bmp" />
+    <Image Include="New_test\1-15.bmp" />
+    <Image Include="New_test\10_1.bmp" />
+    <Image Include="New_test\19_2.bmp" />
+    <Image Include="New_test\2-1.bmp" />
+    <Image Include="New_test\2-10.bmp" />
+    <Image Include="New_test\2-2.bmp" />
+    <Image Include="New_test\2-3.bmp" />
+    <Image Include="New_test\2-4.bmp" />
+    <Image Include="New_test\2-5.bmp" />
+    <Image Include="New_test\2-6.bmp" />
+    <Image Include="New_test\2-7.bmp" />
+    <Image Include="New_test\2-8.bmp" />
+    <Image Include="New_test\2-9.bmp" />
+    <Image Include="output1.png" />
+    <Image Include="test\10_1.bmp" />
+    <Image Include="test\10_1.jpg" />
+    <Image Include="test\19_2.jpg" />
+    <Image Include="test\4_1.jpg" />
+    <Image Include="test\s103.bmp" />
+    <Image Include="test\s104.bmp" />
+    <Image Include="train\1.jpg" />
+    <Image Include="train\10.jpg" />
+    <Image Include="train\10_1.jpg" />
+    <Image Include="train\11_2.jpg" />
+    <Image Include="train\12_2.jpg" />
+    <Image Include="train\13_2.jpg" />
+    <Image Include="train\14_2.jpg" />
+    <Image Include="train\15_2.jpg" />
+    <Image Include="train\16_2.jpg" />
+    <Image Include="train\17_2.jpg" />
+    <Image Include="train\18_2.jpg" />
+    <Image Include="train\19_2.jpg" />
+    <Image Include="train\1_1.jpg" />
+    <Image Include="train\2.jpg" />
+    <Image Include="train\20_2.jpg" />
+    <Image Include="train\2_1.jpg" />
+    <Image Include="train\3.jpg" />
+    <Image Include="train\3_1.jpg" />
+    <Image Include="train\4.jpg" />
+    <Image Include="train\4_1.jpg" />
+    <Image Include="train\5.jpg" />
+    <Image Include="train\5_1.jpg" />
+    <Image Include="train\6.jpg" />
+    <Image Include="train\6_1.jpg" />
+    <Image Include="train\7.jpg" />
+    <Image Include="train\7_1.jpg" />
+    <Image Include="train\8.jpg" />
+    <Image Include="train\8_1.jpg" />
+    <Image Include="train\9.jpg" />
+    <Image Include="train\9_1.jpg" />
+    <Image Include="train\test.jpg" />
+    <Image Include="train\test2.jpg" />
+    <Image Include="train\test3.jpg" />
+    <Image Include="train\test4.jpg" />
+    <Image Include="train\test5.jpg" />
+    <Image Include="train\test\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="eigenfaces.json" />
+    <None Include="opencv test.aps" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="opencv test.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\eigen.txt" />
+    <Text Include="data\facesdata.txt" />
+    <Text Include="data\mean.txt" />
+    <Text Include="list\train_list.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
