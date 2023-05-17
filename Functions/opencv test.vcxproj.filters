@@ -1,0 +1,696 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="opencv test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Task2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FaceDetector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FaceRecognizer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GetFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyPCA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WriteTrainData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaceDetector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaceRecognizer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GetFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyPCA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WriteTrainData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="haarcascade\haarcascade_eye.xml" />
+    <Xml Include="haarcascade\haarcascade_eye_tree_eyeglasses.xml" />
+    <Xml Include="haarcascade\haarcascade_frontalface_alt.xml" />
+    <Xml Include="haarcascade\haarcascade_frontalface_alt2.xml" />
+    <Xml Include="haarcascade\haarcascade_frontalface_default.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="faces\s1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s9.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s12.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s13.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s14.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s15.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s16.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s17.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s18.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s19.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s20.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s21.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s22.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s23.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s24.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s25.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s26.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s27.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s28.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s29.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s30.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s31.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s32.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s33.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s34.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s35.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s36.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s37.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s38.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s39.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s40.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s41.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s42.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s43.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s44.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s45.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s46.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s47.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s48.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s49.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s50.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s51.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s52.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s53.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s54.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s55.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s56.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s57.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s58.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s59.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s60.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s61.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s62.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s63.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s64.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s65.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s66.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s67.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s68.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s69.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s70.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s71.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s72.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s73.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s74.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s75.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s76.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s77.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s78.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s79.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s80.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s81.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s82.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s83.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s84.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s85.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s86.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s87.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s88.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s89.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s90.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s91.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s92.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s93.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s94.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s95.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s96.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s97.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s98.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s99.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s100.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s101.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s102.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s103.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s104.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\s105.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\3.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\4.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\5.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\6.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\7.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\8.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\9.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\10.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\test2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\test.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\test3.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\test4.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\test5.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\test\3.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\1_1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\2_1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\3_1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\4_1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\5_1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\6_1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\7_1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\8_1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\9_1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\10_1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\11_2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\12_2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\13_2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\14_2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\15_2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\16_2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\17_2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\18_2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\19_2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="train\20_2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="test\10_1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="test\4_1.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="test\19_2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Clustered_Image.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="output1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="test\s104.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="test\s103.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\18_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\1_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\2_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\3_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\4_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\5_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\6_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\7_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\8_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\9_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\10_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\11_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\12_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\13_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\14_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\15_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\16_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\17_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\19_2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\10_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="test\10_1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\2-19.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\1-1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\1-2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\1-3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\1-4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\1-5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\1-6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\1-7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\1-8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\1-9.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\1-10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\2-11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\2-12.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\2-13.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\2-14.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\2-15.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\2-16.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\2-17.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="faces\2-18.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\1-11.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\1-12.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\1-13.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\1-14.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\1-15.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\2-1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\2-2.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\2-3.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\2-4.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\2-5.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\2-6.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\2-7.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\2-8.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\2-9.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="New_test\2-10.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="eigenfaces.json" />
+    <None Include="opencv test.aps" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="opencv test.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="list\train_list.txt" />
+    <Text Include="data\eigen.txt" />
+    <Text Include="data\facesdata.txt" />
+    <Text Include="data\mean.txt" />
+  </ItemGroup>
+</Project>
