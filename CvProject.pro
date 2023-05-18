@@ -21,12 +21,21 @@ LIBS += C:\opencv\open-cv-build\bin\libopencv_objdetect460.dll
 
 SOURCES += \
     facedetection.cpp \
+    facerecognizer.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    pca.cpp \
+    roc.cpp \
+    writetraindata.cpp
 
 HEADERS += \
+    ReadFile.h \
     facedetection.h \
-    mainwindow.h
+    facerecognizer.h \
+    mainwindow.h \
+    pca.h \
+    roc.h \
+    writetraindata.h
 
 FORMS += \
     mainwindow.ui
