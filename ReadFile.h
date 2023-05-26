@@ -1,7 +1,5 @@
 #ifndef READFILE_H
 #define READFILE_H
-
-
 #include <stdio.h>
 #include <vector>
 #include <iostream>
@@ -37,11 +35,12 @@ void readList(string& listFilePath, vector<string>& facesPath, vector<string>& f
         facesID.push_back(id);
     }
 }
+
 //read faces in eigenspace that has been trained
 Mat readFaces(int noOfFaces, vector<string>& loadedFaceID)
 {
     Mat faces = Mat::zeros(noOfFaces, noOfFaces, CV_32FC1);
-    string facesDataPath = "C:/Users/sata/Documents/GitHub/Face_Recognition/data/facesdata.txt";
+    string facesDataPath = "D:/3rd Year 2st Term/Computer Vision/Task 5 Repository/Face_Recognition/data/facesdata.txt";
     ifstream readFaces(facesDataPath.c_str(), ifstream::in);
 
     if (!readFaces) {
@@ -70,7 +69,7 @@ Mat readFaces(int noOfFaces, vector<string>& loadedFaceID)
 Mat readMean()
 {
     Mat mean = Mat::zeros(10000, 1, CV_32FC1);
-    string meanPath = "C:/Users/sata/Documents/GitHub/Face_Recognition/data/mean.txt";
+    string meanPath = "D:/3rd Year 2st Term/Computer Vision/Task 5 Repository/Face_Recognition/data/mean.txt";
     ifstream readMean(meanPath.c_str(), ifstream::in);
 
     if (!readMean) {
@@ -96,7 +95,7 @@ Mat readMean()
 Mat readEigen(int noOfFaces)
 {
     Mat eigen = Mat::zeros(noOfFaces, 10000, CV_32FC1);
-    string eigenPath = "C:/Users/sata/Documents/GitHub/Face_Recognition/data/eigen.txt";
+    string eigenPath = "D:/3rd Year 2st Term/Computer Vision/Task 5 Repository/Face_Recognition/data/eigen.txt";
     ifstream readEigen(eigenPath.c_str(), ifstream::in);
 
     if (!readEigen) {

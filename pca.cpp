@@ -1,6 +1,5 @@
 #include "pca.h"
 
-
 #define SHOW_IMAGE 0
 
 MyPCA::MyPCA(vector<string>& _facesPath)
@@ -29,6 +28,7 @@ void MyPCA:: getImgSize(vector<string>& _facesPath)
     imgSize = sampleImg.rows * sampleImg.cols;
     //cout << "Per Image Size is: " << size << endl;
 }
+
 //put all face images to one matrix, order in column
 void MyPCA::mergeMatrix(vector<string>& _facesPath)
 {
@@ -45,6 +45,7 @@ void MyPCA::mergeMatrix(vector<string>& _facesPath)
     }
     //cout << "Merged Matix(Width, Height): " << mergedMatrix.size() << endl;
 }
+
 //compute average face
 void MyPCA::getAverageVector()
 {

@@ -1,8 +1,6 @@
-#include "roc.h"
+//#include "roc.h"
 
-
-
-//int* threshold_range(string folder_path){
+//int* threshold_rangee(string folder_path){
 //        std::vector<cv::Mat> images;
 //        cv::String folder(folder_path);
 //        std::vector<cv::String> file_names;
@@ -27,11 +25,6 @@
 //             euclidean_dist=obj1.getClosetDist();
 //             distances.push_back(euclidean_dist);
 //         }
-
-
-
-
-
 
 
 //    // get min and max value in the vector

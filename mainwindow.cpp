@@ -40,40 +40,6 @@ void MainWindow::on_pushButton_3_clicked()
     ui->stackedWidget->setCurrentIndex(1);
 }
 
-void MainWindow::on_pushButton_2_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(2);
-}
-void showImg(cv::Mat& img, QLabel* imgLbl, enum QImage::Format imgFormat, int width , int hieght, bool colorTransform)
-{
-    if(colorTransform){
-        cvtColor(img, img, COLOR_BGR2RGB);
-    }
-    QImage image((uchar*)img.data, img.cols, img.rows, imgFormat);
-    QPixmap pix = QPixmap::fromImage(image);
-    imgLbl->setPixmap(pix.scaled(width, hieght, Qt::KeepAspectRatio));
-}
-
-
-
-Mat img;
-void MainWindow::on_actionUpload_triggered()
-{
-    ui->imginput1->clear();
-    ui->imgOutput1->clear();
-    imgPath = QFileDialog::getOpenFileName(this, "Open an Image", "..", "Images (*.png *.xpm *.jpg *.bmp)");
-
-    if(imgPath.isEmpty())
-        return;
-    img = imread(imgPath.toStdString());
-    cv::resize(img, img, Size(512, 512));
-    showImg(img, ui->imginput1, QImage::Format_RGB888, ui->imginput1->width(), ui->imginput1->height(),1);
-    showImg(img, ui->imginput2, QImage::Format_RGB888, ui->imginput1->width(), ui->imginput1->height(),0);
-
-
-
-}
-
 void plot_roc(std::vector<double> tpr, std::vector<double> fpr)
 {
     // Create a new window to display the ROC curve
@@ -122,6 +88,46 @@ void plot_roc(std::vector<double> tpr, std::vector<double> fpr)
     waitKey(0);
 }
 
+void MainWindow::on_pushButton_2_clicked()
+{
+
+    std::vector<double> tpr = { 0.0, 0.2, 0.4, 0.8, 1.0 };
+    std::vector<double> fpr = { 0.0, 0.6, 0.8, 0.95, 1.0 };
+    plot_roc(tpr, fpr);
+
+}
+void showImg(cv::Mat& img, QLabel* imgLbl, enum QImage::Format imgFormat, int width , int hieght, bool colorTransform)
+{
+    if(colorTransform){
+        cvtColor(img, img, COLOR_BGR2RGB);
+    }
+    QImage image((uchar*)img.data, img.cols, img.rows, imgFormat);
+    QPixmap pix = QPixmap::fromImage(image);
+    imgLbl->setPixmap(pix.scaled(width, hieght, Qt::KeepAspectRatio));
+}
+
+
+
+Mat img;
+void MainWindow::on_actionUpload_triggered()
+{
+    ui->imginput1->clear();
+    ui->imgOutput1->clear();
+    imgPath = QFileDialog::getOpenFileName(this, "Open an Image", "..", "Images (*.png *.xpm *.jpg *.bmp)");
+
+    if(imgPath.isEmpty())
+        return;
+    img = imread(imgPath.toStdString());
+    cv::resize(img, img, Size(512, 512));
+    showImg(img, ui->imginput1, QImage::Format_RGB888, ui->imginput1->width(), ui->imginput1->height(),1);
+    showImg(img, ui->imginput2, QImage::Format_RGB888, ui->imginput1->width(), ui->imginput1->height(),0);
+
+
+
+}
+
+
+
 void MainWindow::on_submitBtn_clicked()
 {
     Mat output;
@@ -139,29 +145,30 @@ void MainWindow::on_submitBtn_clicked()
 
 void MainWindow::on_predictBtn_clicked()
 {
-        vector<string> trainFacesPath;
-         vector<string> trainFacesID;
-         vector<string> loadedFacesID;
-        //read training list and ID from txt file
-        //read training data(faces, eigenvector, average face) from txt file
-        string trainListFilePath="C:/Users/sata/Documents/GitHub/Face_Recognition/list/train_list.txt";
-        readList(trainListFilePath, trainFacesPath, trainFacesID);
-        Mat avgVec, eigenVec, facesInEigen;
-        facesInEigen = readFaces(int(trainFacesID.size()), loadedFacesID);
-        avgVec = readMean();
-        eigenVec = readEigen(int(trainFacesID.size()));
-        string testImgPath;
-        Mat frame, processed, testImg;
+    vector<string> trainFacesPath;
+     vector<string> trainFacesID;
+     vector<string> loadedFacesID;
+    //read training list and ID from txt file
+    //read training data(faces, eigenvector, average face) from txt file
+    string trainListFilePath="D:/3rd Year 2st Term/Computer Vision/Task 5 Repository/Face_Recognition/list/train_list.txt";
+    readList(trainListFilePath, trainFacesPath, trainFacesID);
+    Mat avgVec, eigenVec, facesInEigen;
+    facesInEigen = readFaces(int(trainFacesID.size()), loadedFacesID);
+    avgVec = readMean();
+    eigenVec = readEigen(int(trainFacesID.size()));
+    string testImgPath;
+    Mat frame, processed, testImg;
 //        do PCA analysis for training faces
-        std::string TestPath = imgPath.toStdString();
-        cout<<TestPath;
+    std::string TestPath = imgPath.toStdString();
+    cout<<TestPath;
 
-        FaceRecognizer faceRecognizer = FaceRecognizer(TestPath, avgVec, eigenVec, facesInEigen, loadedFacesID,3000);
-        // Show Result
-        QString closestID = QString::fromStdString(faceRecognizer.getClosetFaceID());
-        ui->prediction_label->setText(closestID);
+    FaceRecognizer faceRecognizer = FaceRecognizer(TestPath, avgVec, eigenVec, facesInEigen, loadedFacesID,3000);
+    cout<< faceRecognizer.getClosetFaceID()<< "*************";
+    // Show Result
+    QString closestID = QString::fromStdString(faceRecognizer.getClosetFaceID());
 
-    plot_roc(tpr, fpr);
+    ui->prediction_label->setText(closestID);
+
 
 }
 
