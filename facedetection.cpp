@@ -1,4 +1,5 @@
 #include "facedetection.h"
+//#include "ui_mainwindow.h"
 
 
 
@@ -9,7 +10,7 @@ cv::Mat findFacesInImage(cv::Mat img){
       }
 
       cv::CascadeClassifier faceCascade;
-      if (!faceCascade.load("E:/3d year/qt creator/CvProject/xmlFiles/haarcascade_frontalface_default.xml")) {
+      if (!faceCascade.load("D:/3rd Year 2st Term/Computer Vision/Task 5 Repository/Face_Recognition/xmlFiles/haarcascade_frontalface_default.xml")) {
           throw std::invalid_argument("Failed to load face cascade classifier.");
       }
 
